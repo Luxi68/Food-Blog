@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blog</title>
+
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/e13d49ff1d.js" crossorigin="anonymous"></script>
+
+    <script>
+        function clickMenuBars() {
+            var navBg = document.getElementById("nav-bg");
+            var navList = document.getElementById("nav-list");
+
+            if (navBg.style.display === "block") {
+                navBg.style.display = "none";
+            } else {
+                navBg.style.display = "block";
+            }
+        }
+
+        function resizeMenuCheck() {
+            var browserWidth = window.innerWidth;
+            var navBg = document.getElementById("nav-bg");
+
+            if (browserWidth >= 500) {
+                navBg.style.display = "block";
+            } else {
+                navBg.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body onresize="resizeMenuCheck()">
+
+    <!-- Page Container holds all of the content -->
+    <div id="page-container">
+        <!-- Header section contains page title and logo image -->
+        <header>
+            <div id="login-search-bar">
+                <div id="login">
+                    <a href="#
+                    ">Join</a>
+                    /
+                    <a href="#
+                    ">Login</a>
+                </div>
+                <form id="search">
+                    <input type="search" id="query" required="" name="query" placeholder="Search...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <img id="logo" src="images/logo.jpg" />
+            <h1 id="page-title">Food Blog</h1>
+            <div id="mobile-nav">
+                <a class="icon" href="#"><i class="fa-solid fa-heart fa-xl"></i></a>
+                <a class="icon" href="#"><i class="fa-solid fa-magnifying-glass fa-xl"></i></a>
+                <a class="icon" 
+                onclick="clickMenuBars()" href="#"><i class="fa-solid fa-bars fa-xl"></i></a>
+            </div>
+        </header>
+
+        <!-- Nav contains navigation links -->
+        <nav id="nav-bg">
+            <ul id="nav-list">
+                <li class="nav-option"><a href="#">Home</a></li>
+                <li class="nav-option"><a href="#">Popular</a></li>
+                <li class="nav-option"><a href="#">Recipes</a></li>
+                <li class="nav-option"><a href="#">About</a></li>
+                <li class="nav-option"><a href="#">Account</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main section of the main page - contains featured content -->
+        <section id="main-content-container">
+            <div class="featured">
+                <a href="#"><img src="images/featured1.jpg" />
+                    <figcaption class="featured-text">Maple Pancake Stack</figcaption>
+                </a>
+            </div>
+            <div class="featured">
+                <a href="#"><img src="images/featured2.jpg" />
+                    <figcaption class="featured-text">Hawaiian Chicken Pizza</figcaption>
+                </a>
+            </div>
+            <div class="featured">
+                <a href="#"><img src="images/featured3.jpg" />
+                    <figcaption class="featured-text">Mediterranean Salad</figcaption>
+                </a>
+            </div>
+            <div class="featured">
+                <a href="#"><img src="images/featured4.jpg" />
+                    <figcaption class="featured-text">Pistachio and Raspberry Cake</figcaption>
+                </a>
+            </div>
+            <div class="featured">
+                <a href="#"><img src="images/featured5.jpg" />
+                    <figcaption class="featured-text">Avocado and Egg Toast</figcaption>
+                </a>
+            </div>
+            <div class="featured">
+                <a href="#"><img src="images/featured6.jpg" />
+                    <figcaption class="featured-text">Salmon and Zucchini</figcaption>
+                </a>
+            </div>
+        </section>
+
+        <!-- Advert that spans the page - contains Newsletter sign up -->
+        <section id="advert-container">
+            <h1>SIGN UP TO FREE NEWSLETTER</h1>
+            <form>
+                <input type="text" id="name" required="" name="name" placeholder="First Name">
+                <input type="email" id="email" required="" name="email" placeholder="Email Address">
+                <input type="submit" id="sign-up" value="Sign Up">
+            </form>
+        </section>
+
+        <!-- Secondary section - contains two collumns, a main column and an aside-->
+        <div id="secondary-content-container">
+            <!-- Latest section -->
+            <section id="latest-section">
+                <h2 class="section-title">Latest</h2>
+                <div class="latest-div">
+                    <img src="images/latest1.jpg" alt="food">
+                    <article class="latest-article">
+                        <h2>Blueberry and Banana Toast</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Sapien faucibus et molestie ac feugiat sed lectus.
+                        </p>
+                    </article>
+                </div>
+                <div class="latest-div">
+                    <img src="images/latest2.jpg" alt="food">
+                    <article class="latest-article">
+                        <h2>Pesto Pasta with Tomatoes</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Sapien faucibus et molestie ac feugiat sed lectus.
+                        </p>
+                    </article>
+                </div>
+                <div class="latest-div">
+                    <img src="images/latest3.jpg" alt="food">
+                    <article class="latest-article">
+                        <h2>Super Simple Meatballs</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Sapien faucibus et molestie ac feugiat sed lectus.
+                        </p>
+                    </article>
+                </div>
+                <a href="#">Read More</a>
+            </section>
+
+            <!-- Categories section -->
+            <aside id="secondary-aside">
+                <section id="categories-section">
+                    <h2 class="section-title">Categories</h2>
+                    <a href="#" class="category">
+                        <img src="images/vegetarian.jpg" height="100px" width="100px" />
+                        <figcaption>Vegetarian</figcaption>
+                    </a>
+                    <a href="#" class="category">
+                        <img src="images/quick.jpg" height="100px" width="100px" />
+                        <figcaption>Quick and Easy</figcaption>
+                    </a>
+                    <a href="#" class="category">
+                        <img src="images/lunch.jpg" height="100px" width="100px" />
+                        <figcaption>Lunch</figcaption>
+                    </a>
+                    <a href="#" class="category">
+                        <img src="images/dessert.jpg" height="100px" width="100px" />
+                        <figcaption>Dessert</figcaption>
+                    </a>
+                </section>
+            </aside>
+        </div>
+
+        <!-- Footer section contains social links and copyright -->
+        <footer>
+            <div id="socials">
+                <a class="icon" href="#"><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                <a class="icon" href="#"><i class="fa-brands fa-square-twitter fa-2xl"></i></a>
+                <a class="icon" href="#"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+                <a class="icon" href="#"><i class="fa-brands fa-square-pinterest fa-2xl"></i></a>
+            </div>
+            <div id="footer-text">
+                <a href="#">Privacy Policy</a>
+                /
+                <span>Copyright (C) 2022. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
